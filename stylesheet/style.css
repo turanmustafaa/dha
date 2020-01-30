@@ -1,0 +1,1596 @@
+/* @viewport {
+    width: device-width ;
+    zoom: 3.0 ;
+  } */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* margin-right: auto;
+    margin-left: auto; */
+}
+
+::-webkit-scrollbar {
+    z-index: 100;
+    background-color: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb {
+    z-index: 102;
+    background: linear-gradient(to bottom, gray, #27a3a8);
+    border-radius: 10px;
+}
+
+body {
+    width: 100%;
+}
+
+.website {
+    width: 100%;
+    overflow: hidden;
+    min-height: 100vh;
+}
+/* ****************************************************İNDEX.HTML *************************************** */
+/* ********************************************************************************************************* */
+body p {
+    font-size: 12px;
+}
+
+.hamburger {
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    z-index: 15;
+    transition: .5s ease-in-out;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div span {
+    width: 30px;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: black;
+    display: block;
+    margin-left: auto;
+    transition: .5s ease-in-out;
+}
+
+.change {
+    z-index: 15;
+}
+
+.change span:nth-child(1) {
+    -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+    transform: rotate(-45deg) translate(-5px, 5px);
+    transition: .5s ease-in-out;
+}
+
+.change span:nth-child(2) {
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+
+.change span:nth-child(3) {
+    -webkit-transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -6px);
+    transition: .5s ease-in-out;
+}
+
+.scroll-down {
+    background-color: #27A3A8;
+    padding: 20px;
+    border-radius: 50%;
+    position: sticky;
+    transition: .3s ease-in-out;
+}
+
+/* NAVBAR******************************************************************** ******************************/
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    /* background-color: seagreen; */
+    width: 100%;
+    height: 7vh;
+    margin-top: 20px;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    display: inline-block;
+    justify-content: space-around;
+    line-height: 7vh;
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: .8vw;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-links li a::after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    background: skyblue;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+
+/* HEADER***************************************************************************************************** */
+
+
+header {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 90%;
+    margin-top: 30px;
+    justify-self: center;
+
+}
+
+.header-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-right {
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    font-size: .7em;
+}
+
+.header-right button {
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid skyblue;
+    position: relative;
+    transition: background .5s ease-in-out;
+    cursor: pointer;
+}
+
+.header-right button:hover {
+    background-color: #27A3A8;
+}
+
+/* edges******************************************************************************* */
+
+.header-right button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 1px;
+    /* border-bottom: 1px solid skyblue; */
+    display: inline-block;
+    background-color: skyblue;
+    transform: translate(-70%, -50%);
+}
+
+.header-right button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 20px;
+    height: 1px;
+    /* border-bottom: 1px solid skyblue; */
+    display: inline-block;
+    background-color: skyblue;
+    transform: translate(70%, -50%);
+}
+
+.header-right h2 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 1px solid skyblue;
+    padding: 4px 0;
+    position: relative;
+}
+
+.header-right h2::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: white;
+    transform: translate(-50%, -50%);
+}
+
+.header-right h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: white;
+    transform: translate(50%, -50%);
+}
+
+/* BİZ KİMİZ  *************************************************************************/
+
+.grid-container {
+    padding-bottom: 100px;
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    margin-top: 130px;
+    /* width: 100%; */
+    margin-left: auto;
+    margin-right: auto;
+    background: url(../dha-images/middle.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.grid-container .container1 h1 {
+    color: whitesmoke;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding: 15px 15px 0 15px;
+    font-size: 2rem;
+}
+
+/*edges****************************************************************************/
+.grid-container .container1 h1::before {
+    content: "";
+    left: 0;
+    top: 0;
+    height: 10px;
+    width: 2px;
+    background-color: whitesmoke;
+    position: absolute;
+}
+
+.grid-container .container1 h1 span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 2px;
+    background-color: whitesmoke;
+}
+
+.grid-container .container1 h1::after {
+    content: "";
+    right: 0;
+    top: 0;
+    height: 10px;
+    width: 2px;
+    background-color: whitesmoke;
+    position: absolute;
+}
+
+.grid-container .container1 h1 span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 2px;
+    background-color: whitesmoke;
+}
+
+/* *********************************************************** */
+.grid-container p {
+    color: whitesmoke;
+}
+
+.container1 {
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 80px;
+    text-align: center;
+    font-size: .7em;
+}
+
+.container2 {
+
+    font-size: .5em;
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.container2 div {
+    text-align: center;
+    margin: 10px;
+}
+
+.container2 div img {
+    padding-bottom: 5px;
+}
+
+.container2 h1 {
+    font-size: 15px;
+    font-weight: 700;
+    color: darkslategray;
+}
+
+/* İŞLERİMİZ****************************************************************************************************** */
+
+.works-1 {
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 120px;
+    text-align: center;
+    font-size: .7em;
+}
+
+.works-1 h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding: 8px 18px 0 18px;
+}
+
+.works-1 h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 8px;
+    background-color: deepskyblue;
+}
+
+.works-1 h1 span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8px;
+    height: 2px;
+    background-color: deepskyblue;
+}
+
+.works-1 h1::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 8px;
+    background-color: deepskyblue;
+}
+
+.works-1 h1 span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 2px;
+    background-color: deepskyblue;
+}
+
+.works-2 {
+    position: relative;
+}
+
+.active {
+    background: linear-gradient(to bottom, #27a3a8, dodgerblue);
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    transition: .3s;
+}
+
+.works-2 ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    position: relative;
+    font-size: .7rem;
+
+}
+
+.works-2 ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.works-2 ul li:nth-child(even) {
+    border-top: 1px solid #27a3a8;
+    ;
+    width: 10px;
+    align-items: center;
+    align-self: center;
+}
+
+.works-2 ul li {
+    margin: 0px 5px;
+}
+
+.works-3 {
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 300px;
+}
+
+.works-3 div {
+    float: left;
+}
+
+.grid-item {
+    background-color: gray;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+.item2 {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+
+.item3 {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+}
+
+.item4 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.item5 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.item6 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.item7 {
+    grid-column: 2 / span 2;
+    grid-row: 3;
+}
+
+
+/* DİGİTAL RECETEMİZ SLİDER ***************************************************************************************/
+
+.digital-pros {
+    margin-top: 100px;
+    position: relative;
+}
+
+.digital-pros .digital {
+    margin-left: 50%;
+    display: inline-block;
+    transform: translate(-50%);
+    margin-bottom: 100px;
+}
+
+.digital div p {
+    float: right;
+    font-size: 1rem;
+}
+
+.digital h1 {
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding: 15px 15px 0 15px;
+}
+
+.digital-pros .digital-slider {
+    width: 70%;
+    overflow: hidden;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.digital-pros .swiper-slide {
+    text-align: center;
+    width: 200px;
+    min-height: 350px;
+    position: relative;
+}
+
+/*******************************************koseler1***********/
+.digital h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 10px;
+    background-color: dodgerblue;
+}
+
+.digital h1 span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 2px;
+    background-color: dodgerblue;
+}
+
+.digital h1::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 10px;
+    background-color: dodgerblue;
+}
+
+.digital h1 span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+    height: 2px;
+    background-color: dodgerblue;
+}
+
+/* ******************** **************************koseler2********************/
+.digital-pros .swiper-slide::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 10px;
+    background-color: dodgerblue;
+}
+
+.digital-pros .swiper-slide span::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 2px;
+    background-color: dodgerblue;
+}
+
+.digital-pros .swiper-slide::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    height: 10px;
+    background-color: dodgerblue;
+}
+
+.digital-pros .swiper-slide span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 2px;
+    background-color: dodgerblue;
+}
+
+/****************************************************************************************/
+
+.digital-pros .vertical-line {
+    height: 20px;
+    border-left: 1.3px solid skyblue;
+    margin-left: 50%;
+    margin-bottom: 10px;
+}
+
+/* .swiper-wrapper{
+    width: 500px;
+} */
+.digital-pros .swiper-slide p,
+h5,
+h6 {
+    font-size: 1rem;
+}
+
+.digital-pros .swiper-slide h5 {
+    font-weight: 700;
+}
+
+.digital-pros .digital-slider .swiper-button-prev {
+    padding-top: 250px;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.digital-pros .digital-slider .swiper-button-next {
+    padding-top: 250px;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.digital-pros .swiper-pagination {
+    margin-bottom: -30px;
+}
+
+
+/* İKİNCİ SLİDER( BLOG ) *************************************************************************************/
+
+
+.blog {
+    margin-top: 100px;
+    position: relative;
+    background: url(../dha-images/blog.png) no-repeat center center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 200px;
+}
+
+.blog .blog-header {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.blog .blog-header div h1 {
+    color: white;
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px 0 30px;
+}
+
+/* edges ********************************************************************* */
+.blog .blog-header div h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 10px;
+    background-color: whitesmoke;
+
+}
+
+.blog .blog-header div h1 span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 2px;
+    background-color: whitesmoke;
+
+}
+
+.blog .blog-header div h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 10px;
+    background-color: whitesmoke;
+}
+
+.blog .blog-header div h1 span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 2px;
+    background-color: whitesmoke;
+}
+
+/* **************************************************************************************************** */
+.blog-slider {
+    width: 70%;
+    overflow: hidden;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.blog-slider .swiper-wrapper {
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.blog-slider .swiper-slide .swipe {
+    /* width: 230px; */
+    height: 300px;
+    background-color: whitesmoke;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.blog .blog-slider .swiper-button-p {
+    position: absolute;
+    z-index: 3;
+    margin-top: -170px;
+    /* float: left; */
+    right: 95%;
+    cursor: pointer;
+}
+
+.blog .blog-slider .swiper-button-n {
+    position: absolute;
+    z-index: 3;
+    margin-top: -170px;
+    float: right;
+    left: 95%;
+    cursor: pointer;
+}
+
+.blog .blog-slider .swipe {
+    position: relative;
+}
+
+.blog .blog-slider .swipe .swipe-content {
+    left: 10px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.blog .blog-slider .swipe .swipe-content h5 {
+    margin-bottom: 0px;
+}
+
+.blog .blog-slider .swipe .swipe-content p {
+    margin-bottom: 0px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.blog .swiper-pagination {
+    margin-bottom: -130px;
+}
+
+/* REFERANSLAR******************************************************************************** */
+
+
+.refer {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+.refer .refer-header {
+    margin-left: 50%;
+    display: inline-block;
+    transform: translate(-50%);
+    margin-bottom: 100px;
+}
+
+.refer-header h1 {
+    color: #27A3A8;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    padding: 10px 10px 0 10px;
+}
+
+/*edges******************************************************************************/
+.refer-header h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 10px;
+    background-color: #27A3A8;
+}
+
+.refer-header h1 span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 2px;
+    background-color: #27A3A8;
+}
+
+.refer-header h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 10px;
+    background-color: #27A3A8;
+}
+
+.refer-header h1 span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 2px;
+    background-color: #27A3A8;
+}
+
+/* FOOTER************************************************************************ */
+.footer {
+    /* margin-top: 100px; */
+    color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+    background: url(../dha-images/footer.png) no-repeat center center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: auto;
+    /* display: inline-block; */
+    position: relative;
+    bottom: 0 !important;
+    left: 0;
+    clear: both;
+
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.footer-top-left {
+    margin-left: 8%;
+}
+
+.footer-top-left div i {
+    color: darkslategray;
+}
+
+.footer-top-left div {
+    color: whitesmoke;
+    font-weight: 700;
+    font-size: .7em;
+}
+
+.footer-top-right {
+    margin-right: 3%;
+}
+
+.footer-top-right img {
+    width: 65%;
+    height: auto;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-bottom-right {
+    display: grid;
+    grid-gap: 0em;
+    grid-area: auto;
+}
+
+.foot-item1 {
+    grid-column: 1 / span 1;
+    grid-row: 1;
+}
+
+.foot-item2 {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+    list-style-type: none;
+    display: flex;
+}
+
+.foot-item3 {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.footer-bottom-left {
+    text-align: center;
+}
+
+.footer-bottom-left p {
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.footer-bottom-left i {
+    color: darkslategray;
+}
+
+.footer-bottom-middle {
+    text-align: center;
+}
+
+.footer-bottom-middle h5 {
+    font-weight: 700;
+    color: whitesmoke;
+}
+
+.footer-bottom-middle i {
+    margin: 0 15px;
+    border: 1px solid lightsteelblue;
+    padding: 5px;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+    box-shadow: inset 0px -5px 5px 4px rgba(0, 0, 0, .1);
+}
+
+.footer-bottom-middle i:hover {
+    background-color: teal;
+    color: darkslategrey;
+}
+
+.footer-bottom-right .foot-item1 p {
+    margin: 0 0 0 0;
+    font-size: .7rem;
+}
+
+.footer-bottom-right .foot-item2 li {
+    margin: 0 3px 0 3px;
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+.footer-bottom-right .foot-item2 li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.toggleclass {
+    display: block;
+}
+
+
+/* ************************************************************************************************** */
+/* ********************************************** WHO-WE-ARE.HTML ********************************************* */
+
+.website .whoweare {
+    background-color: #27a3a8;
+}
+
+.website .whoweare div {
+    margin-left: 100px;
+    padding-top: 30px;
+    padding-bottom: 130px;
+}
+
+.website .whoweare div p {
+    font-size: .8rem;
+    color: whitesmoke;
+}
+
+.website .whoweare div p::first-line {
+    font-weight: 700;
+}
+
+#who {
+    margin-top: 120px;
+}
+
+#who h1 {
+    margin-left: 100px;
+    color: #27a3a8;
+    font-weight: 700;
+}
+
+.whoweare-container {
+
+    font-size: .5em;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    text-align: center;
+    margin-top: -70px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+}
+
+.whoweare-container div {
+    text-align: center;
+    margin: 10px;
+}
+
+.whoweare-container div div p {
+    color: #27a3a8;
+    font-weight: 400;
+}
+
+.whoweare-container div div h5 {
+    font-weight: 700;
+}
+
+.whoweare-container div img {
+    padding-bottom: 5px;
+}
+/* **************************************************************DİGİTAL.HTML ************************************/
+/* ***************************************************************************************** **************/
+.digital-1 {
+    width: auto;
+    margin-left: 10%;
+    display: inline-block;
+    margin-top: 100px;
+}
+.digital-1 div h1{
+    color: #27a3a8;
+    font-weight: 700;
+}
+.digital-1 div p{
+    font-weight: 600;
+    font-size: .8rem;
+    float: right;
+}
+.digital-2{
+    margin-top: 70px;
+}
+.dcontainer{
+    margin-left: 200px;
+    margin-bottom: 50px;
+    width: 60vw;
+}
+.dcontainer div{
+    display: grid;
+    width: 60vw;
+    
+}
+.dcontainer div div h3{
+    font-weight: 700;
+}
+.dcontainer div div:first-child{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    /* text-align: right; */
+    width: 500px;
+    height: auto;
+
+}
+.dcontainer div div:first-child img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.dcontainer div div:nth-child(2){
+    grid-column: 2;
+    grid-row: 1 / span 1;
+    margin-left: 50px;
+    display: inline-block;
+
+}
+.dcontainer div div:nth-child(3){
+    grid-column: 2 / span 1;
+    grid-row: 2;
+    margin-left: 50px;
+}
+/* .dcontainer div div:nth-child(3) p{
+
+} */
+
+/* edges*************************************************** */
+.dcontainer div div h3{
+    position: relative;
+    align-self: baseline;
+    padding: 10px;
+    display: inline-flex;
+}
+.dcontainer div div h3::before{
+    content: "";
+    position: absolute;
+    bottom: 15%;
+    left: -1500px;
+    width: 1500px;
+    height: 3px;
+    background-color: #27A3A8;
+    overflow: hidden;
+}
+.dcontainer div div h3 .span1::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    height: 10px;
+    background-color: #27A3A8;
+}
+.dcontainer div div h3 .span1::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 10px;
+    background-color: #27A3A8;
+}
+.dcontainer div div h3 .span2::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 3px;
+    background-color: #27A3A8;
+}
+.dcontainer div div h3 .span2::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 3px;
+    background-color: #27A3A8;
+}
+
+/* **************************************************************RESPONSİVE MOBILE   *************************************** */
+/* ************************************************************************************************************** */
+/* ********************************************************************************************************** */
+/* ************************************************************************************************************ */
+
+@media only screen and (max-width: 650px) {
+/* ***********************************************************    İNDEX.HTML *************************************/
+/* ********************************************************************************************************* */
+
+    .website {
+        color: darkslategray !important;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navigation .logo {
+        width: 50%;
+        height: 30%;
+        margin-left: -130px;
+        margin-top: 10px;
+
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        height: 100%;
+        z-index: 12;
+        position: fixed;
+        top: 0;
+
+    }
+
+    .nav-links ul {
+        background: linear-gradient(to bottom, #27A3A8, gray);
+        padding-top: 250px;
+        padding-bottom: 30px;
+    }
+
+    .nav-links ul li {
+        display: block;
+        line-height: 7vh;
+    }
+
+    .nav-links ul li a {
+        color: whitesmoke;
+        font-size: 1rem;
+    }
+
+    .header {
+        display: block;
+        width: 100%;
+    }
+
+    .header-right {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header-right div p {
+        font-size: 1rem;
+    }
+
+    .grid-container {
+        margin-top: 50px;
+        background-image: none;
+    }
+
+    .grid-container .container1 {
+        padding-top: 0px;
+        width: 80%;
+    }
+
+    .grid-container .container1 p {
+        font-size: 1rem;
+    }
+
+    .grid-container .container1 h1 {
+        color: darkslategray;
+    }
+
+    .grid-container .container1 h1::before {
+        background-color: dodgerblue;
+    }
+
+    .grid-container .container1 h1::after {
+        background-color: dodgerblue;
+    }
+
+    .grid-container .container1 h1 span::before {
+        background-color: dodgerblue;
+    }
+
+    .grid-container .container1 h1 span::after {
+        background-color: dodgerblue;
+    }
+
+    .grid-container .container1 p {
+        color: darkslategray;
+    }
+
+    .grid-container .container2 {
+        display: block;
+    }
+
+    .grid-container .container2 div {
+        font-size: 1rem;
+    }
+
+    .grid-container .container2 div p {
+        color: darkslategray;
+        font-size: 1rem;
+    }
+
+    .grid-container .container2 div h1 {
+        font-size: 1.2rem;
+    }
+
+    .works-container {
+        margin-top: 30px;
+    }
+
+    .works-1 {
+        width: auto;
+        padding-top: 0px;
+    }
+
+    .works-1 div p {
+        font-size: 1rem;
+    }
+
+    .works-2 {
+        width: 90%;
+    }
+
+    .works-2 li:nth-child(even) {
+        display: none;
+    }
+
+    .works-2 li {
+        font-size: .6rem;
+    }
+
+    .works-3 {
+        display: block;
+    }
+
+    .works-3 .grid-item {
+        width: 100px;
+        height: 100px;
+    }
+
+    .digital-pros .digital {
+        width: 80%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .digital-pros .digital-slider .swiper-button-prev {
+        /* padding-top: 250px;
+        display: inline-block; */
+        margin-left: 0px;
+    }
+
+    .digital-pros .digital-slider .swiper-button-next {
+        /* padding-top: 250px;
+        display: inline-block; */
+        margin-right: 0px;
+    }
+
+    .blog {
+        margin-top: 0px;
+        background-image: none;
+    }
+
+    .blog .blog-header div h1 {
+        color: #27A3A8;
+    }
+
+    .blog .blog-header div h1::before {
+        background-color: #27A3A8;
+    }
+
+    .blog .blog-header div h1::after {
+        background-color: #27A3A8;
+    }
+
+    .blog .blog-header div h1 span::before {
+        background-color: #27A3A8;
+    }
+
+    .blog .blog-header div h1 span::after {
+        background-color: #27A3A8;
+    }
+
+    .refer {
+        margin-top: 30px;
+    }
+
+    .footer {
+        background-color: #27A3A8;
+        bottom: 50%;
+        background-image: none;
+    }
+
+    .footer-top {
+        display: block;
+    }
+
+    .footer-bottom {
+        display: block;
+    }
+
+    .footer-bottom-right {
+        display: block;
+    }
+
+    .footer-bottom-right div {
+        text-align: center;
+    }
+
+    .footer-bottom-right .foot-item2 {
+        display: block;
+    }
+
+    .footer-bottom-right .foot-item2 li {
+        margin: 5px;
+    }
+
+    .footer-bottom-items {
+        margin-top: 20px;
+    }
+
+    .footer-top {
+        text-align: center;
+    }
+
+    .footer-top .footer-top-left {
+        margin: auto;
+    }
+
+    .footer-top .footer-top-right {
+        margin: auto;
+    }
+
+/* **************************************************  WHO-WE-ARE.HTML ************************************** */
+/* ************************************************************************************************* */
+    #who{
+        text-align: center;
+    }
+    #who h1{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .website .whoweare div {
+        margin-left: 20px;
+        padding-top: 30px;
+        padding-bottom: 130px;
+    }
+    .website .whoweare-container{
+        margin-top: 20px;
+        display: block;
+    }
+/* ***************************************************************DİGİTAL.HTML ******************/
+/* ************************************************************************************************** */
+
+    .dcontainer{
+        margin-left: auto;
+        margin-bottom: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .dcontainer div{
+        display: block;
+        width: 100%;
+    }
+    .dcontainer div div:first-child img{
+        width: 100vw;
+        height: 250px;
+        object-fit: cover;
+    }
+    .dcontainer div div:nth-child(2){
+        margin-left: auto;
+        text-align: center;
+    }
+    .dcontainer div div:nth-child(3){
+        margin-left: auto;
+    }
+    .dcontainer div div h3{
+        margin: 20px;
+    }
+    .dcontainer div div p{
+        display: block;
+        width: 90%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .dcontainer div div h3::before{
+        display: none;
+    }
+
+}
+
+
+/*  ************************************************TABLET FORMAT************************ */
+/* ***************************************************************************************** */
+/* ****************************************************************************************** */
+/* **************************************************************************************************** */
+
+@media only screen and (min-width:651px) and (max-width: 1100px) {
+/* ***********************************************************    İNDEX.HTML *************************************/
+/* ********************************************************************************************************* */
+
+    .navigation .logo img {
+        width: 80%;
+        height: auto;
+    }
+
+    .navigation .nav-links {
+        margin-top: -1vh;
+    }
+
+    .navigation .nav-links ul li {
+        font-size: .7rem;
+    }
+
+    .header .header-right div h2 {
+        font-size: 1rem;
+    }
+
+    .header .header-right div button {
+        font-size: .5rem;
+    }
+
+    .grid-container {
+        margin-top: 50px;
+    }
+
+    .grid-container .container1 {
+        padding-top: 20px;
+    }
+
+    .grid-container .container1 h1 {
+        font-size: 1.6rem;
+    }
+
+    .grid-container .container1 p {
+        font-size: .6rem;
+    }
+
+    .grid-container .container2 {
+        margin-top: 20px;
+    }
+
+    .grid-container .container2 div img {
+        width: 40%;
+        height: auto;
+    }
+
+    .grid-container .container2 div h1 {
+        font-size: .7rem;
+    }
+
+    .works-container {
+        margin-top: 0px;
+    }
+
+    .works-container .works-1 {
+        padding-top: 30px;
+    }
+
+    .works-container .works-1 div h1 {
+        font-size: 1.6rem;
+    }
+
+    .digital-pros .digital div h1 {
+        font-size: 1.6rem;
+    }
+
+    .digital-slider .swiper-wrapper .swiper-slide div p {
+        font-size: .7rem;
+    }
+
+    .digital-pros .digital-slider .swiper-button-prev {
+        padding-top: 250px;
+        display: inline-block;
+        margin-left: 50px;
+    }
+
+    .digital-pros .digital-slider .swiper-button-next {
+        padding-top: 250px;
+        display: inline-block;
+        margin-right: 50px;
+    }
+
+    .blog .blog-header {
+        padding-top: 120px;
+    }
+
+    .blog .blog-header div h1 {
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    .blog .blog-slider .swiper-wrapper {
+        margin-top: 30px;
+    }
+
+    .refer .refer-header div h1 {
+        font-size: 1.6rem;
+    }
+}
