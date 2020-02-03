@@ -105,10 +105,10 @@ window.onload = function () {
 
 
 
-  // active class'ı ekleme///////////////////////////////////////////
+  // activeted class versiyon 1///////////////////////////////////////////
 
-  // $('.nav-links ul li').on("click", function(e) {
-  //   e.preventDefault();
+  // $('.nav-links ul li').on("click", function() {
+  //   // e.preventDefault();
   //   $(function () {
   //     setNavigation();
   //   });
@@ -130,9 +130,7 @@ window.onload = function () {
   // })
 
 
-
-
-// active class ekleme ikinci versiyon///////
+// active class versiyon 2///////
 
 
   // $(".nav-links ul li").click(function(){
@@ -143,14 +141,31 @@ window.onload = function () {
 
 
   
-  // active classs 3.versiyon////////////////////////////////////
+  // activeted classs 3versiyon ////////////////////////////////////
 
   // $('.nav-links ul li').click(function(){
   //   //  e.preventDefault();
+  //   $this = $(this)
+  //   console.log($this)
   //   $(this).parent().children().not(this).removeClass("activeted")
-  //     $(e.target).parent('li').addClass("activeted")
+  //     $(this).parent('li').addClass("activeted")
       
   // })
 
-
+  $('.nav-links ul li a').filter(function(){
+    console.log(location.href)
+    return this.href === location.href;
+  }).addClass('activeted');
+  
  }
+
+
+
+// $(".nav-links ul li a").on("click",function(){
+//     $this = $(this)
+//   if($this.href === location.href){
+//     $this.addClass("activeted")
+//   }
+// })
+  
+

@@ -139,8 +139,9 @@ body p {
     left: 0;
 }
 .activeted{
-    background-color: blue;
-    /* border-bottom: 2px solid blue; */
+    background: linear-gradient(to bottom, #27a3a8, dodgerblue);
+    border-radius: 5px;
+    padding: 0px 5px;
 }
 
 
