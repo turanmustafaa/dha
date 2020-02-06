@@ -1216,6 +1216,7 @@ h6 {
     position: relative;
     text-decoration: none;
     transition: .5s cubic-bezier(0.13, 0.4, 0, 4.03);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     
 }
 .refcontainer .refsample div{
@@ -1231,11 +1232,9 @@ h6 {
     margin-top: 0px;
     margin-bottom: 0px;
 }
-.refcontainer > div div:nth-child(odd):hover{
+.refcontainer > div div:hover{
     transform: rotateZ(15deg);
-}
-.refcontainer > div div:nth-child(even):hover{
-    transform: rotateZ(-15deg);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 .refcontainer  .refsample  div::before{
     content: "visit the site";
