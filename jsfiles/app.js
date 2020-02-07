@@ -1,5 +1,6 @@
 window.onload = function () {
 
+  // ANASAYFA SLİDERLARI///////////////////////////////
 
   var mySwiper = new Swiper('.digital-slider', {
     direction: 'horizontal',
@@ -63,6 +64,7 @@ window.onload = function () {
 
   });
 
+// ANASAYFA FİLTER BLOGU////////////////////////////////////
 
   var $boxs = $(".grid-item");
   var $btns = $(".btn").on("click", function (e) {
@@ -79,6 +81,28 @@ window.onload = function () {
       .fadeIn(450);
     e.preventDefault();
   });
+
+// WORK-SAMPLES FİLTER////////////////////////////////////
+
+var $boxs2 = $(".grid-list");
+var $btns2 = $(".btn2").on("click", function (e) {
+
+  var activework =
+    $btns2.removeClass("active2")
+    .filter(this)
+    .addClass("active2")
+    .data("filter2");
+
+  $boxs2
+    .hide()
+    .filter("." + activework)
+    .fadeIn();
+  e.preventDefault();
+});
+
+
+
+  // HAMBURGER SCROLL////////////////////////////////////////
 
   $(window).scroll(function () {
     var height = $(window).scrollTop();
@@ -102,9 +126,25 @@ window.onload = function () {
       //   $("#hamburger div").addClass("scroll-down");
     }
   });
+  // NAVİGATİON ACTİVE CLASS///////////////////////
+
+
+  $('.nav-links ul li a').filter(function(){
+    console.log(location.href)
+    return this.href === location.href;
+  }).addClass('activeted');
+  
+ }
 
 
 
+// $(".nav-links ul li a").on("click",function(){
+//     $this = $(this)
+//   if($this.href === location.href){
+//     $this.addClass("activeted")
+//   }
+// })
+  
   // activeted class versiyon 1///////////////////////////////////////////
 
   // $('.nav-links ul li').on("click", function() {
@@ -151,20 +191,3 @@ window.onload = function () {
   //     $(this).parent('li').addClass("activeted")
       
   // })
-
-  $('.nav-links ul li a').filter(function(){
-    console.log(location.href)
-    return this.href === location.href;
-  }).addClass('activeted');
-  
- }
-
-
-
-// $(".nav-links ul li a").on("click",function(){
-//     $this = $(this)
-//   if($this.href === location.href){
-//     $this.addClass("activeted")
-//   }
-// })
-  

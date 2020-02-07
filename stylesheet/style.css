@@ -10,6 +10,7 @@
     margin-left: auto; */
 }
 
+
 ::-webkit-scrollbar {
     z-index: 100;
     background-color: whitesmoke;
@@ -1288,6 +1289,63 @@ h6 {
     object-fit: cover;
     position: absolute;
 }
+/********************************************************************************** WORK-SAMPLES.HTML *********/
+/* *********************************************************************************************************** */
+.active2{
+    transform: skew();
+    font-weight: 900;
+    transition: .2s ease-in-out;
+}
+.work-sample-header{
+    margin-top: 100px;
+    margin-left: 50px;
+    display: block;
+    margin-bottom: 20px;
+}
+.work-sample-header h1{
+    margin-bottom: 0px;
+    font-weight: 700;
+    color: #27a3a8;
+}
+.work-sample{
+    margin-left: 20px;
+}
+.work-sample ul li{
+    display: inline-block;
+    position: relative;
+    margin: 0px 5px;
+}
+.work-sample ul li a{
+    text-decoration: none;
+    font-size: .7rem;
+}
+.work-sample ul li a:nth-child(odd){
+    color: black;
+}
+.work-sample ul li:nth-child(even){
+    margin-bottom: 5px;
+    border-top: 1px solid #27a3a8;
+    width: 10px;
+    align-items: center;
+    align-self: center;
+}
+.work-sample ul{
+    list-style-type: none;
+    position: relative;
+}
+.work-sample-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.work-sample-2 > div{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    margin: 10px;
+}
+
 
 
 /* **************************************************************RESPONSİVE MOBILE   *************************************** */
@@ -1621,6 +1679,23 @@ h6 {
     .blog-body > div:nth-child(3) img{
         position: relative;
         object-fit: cover;
+    }
+    /************************************************************ WORK-SAMPLES.HTML******************** */
+    /* ************************************************************************************************** */
+    .work-sample-header h1{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+    .work-sample-header{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+    .work-sample{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
     }
 }
 
