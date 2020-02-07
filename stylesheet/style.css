@@ -10,7 +10,6 @@
     margin-left: auto; */
 }
 
-
 ::-webkit-scrollbar {
     z-index: 100;
     background-color: whitesmoke;
@@ -32,6 +31,7 @@ body {
     overflow: hidden;
     min-height: 100vh;
 }
+
 /* ****************************************************İNDEX.HTML *************************************** */
 /* ********************************************************************************************************* */
 body p {
@@ -101,6 +101,7 @@ body p {
     height: 7vh;
     margin-top: 20px;
 }
+
 /* .navigation .logo a img{
     margin-left: -20px;
 } */
@@ -142,7 +143,8 @@ body p {
     width: 100%;
     left: 0;
 }
-.activeted{
+
+.activeted {
     background: linear-gradient(to bottom, #27a3a8, dodgerblue);
     border-radius: 5px;
     padding: 0px 5px;
@@ -1075,6 +1077,7 @@ h6 {
 .whoweare-container div img {
     padding-bottom: 5px;
 }
+
 /* **************************************************************DİGİTAL.HTML ************************************/
 /* ***************************************************************************************** **************/
 .digital-1 {
@@ -1083,32 +1086,39 @@ h6 {
     display: inline-block;
     margin-top: 100px;
 }
-.digital-1 div h1{
+
+.digital-1 div h1 {
     color: #27a3a8;
     font-weight: 700;
 }
-.digital-1 div p{
+
+.digital-1 div p {
     font-weight: 600;
     font-size: .8rem;
     float: right;
 }
-.digital-2{
+
+.digital-2 {
     margin-top: 70px;
 }
-.dcontainer{
+
+.dcontainer {
     margin-left: 200px;
     margin-bottom: 50px;
     width: 60vw;
 }
-.dcontainer div{
+
+.dcontainer div {
     display: grid;
     width: 60vw;
-    
+
 }
-.dcontainer div div h3{
+
+.dcontainer div div h3 {
     font-weight: 700;
 }
-.dcontainer div div:first-child{
+
+.dcontainer div div:first-child {
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
     /* text-align: right; */
@@ -1116,35 +1126,40 @@ h6 {
     height: auto;
 
 }
-.dcontainer div div:first-child img{
+
+.dcontainer div div:first-child img {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
-.dcontainer div div:nth-child(2){
+
+.dcontainer div div:nth-child(2) {
     grid-column: 2;
     grid-row: 1 / span 1;
     margin-left: 50px;
     display: inline-block;
 
 }
-.dcontainer div div:nth-child(3){
+
+.dcontainer div div:nth-child(3) {
     grid-column: 2 / span 1;
     grid-row: 2;
     margin-left: 50px;
 }
+
 /* .dcontainer div div:nth-child(3) p{
 
 } */
 
 /* edges*************************************************** */
-.dcontainer div div h3{
+.dcontainer div div h3 {
     position: relative;
     align-self: baseline;
     padding: 10px;
     display: inline-flex;
 }
-.dcontainer div div h3::before{
+
+.dcontainer div div h3::before {
     content: "";
     position: absolute;
     bottom: 15%;
@@ -1154,7 +1169,8 @@ h6 {
     background-color: #27A3A8;
     overflow: hidden;
 }
-.dcontainer div div h3 .span1::before{
+
+.dcontainer div div h3 .span1::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -1163,7 +1179,8 @@ h6 {
     height: 10px;
     background-color: #27A3A8;
 }
-.dcontainer div div h3 .span1::after{
+
+.dcontainer div div h3 .span1::after {
     content: "";
     position: absolute;
     top: 0;
@@ -1172,7 +1189,8 @@ h6 {
     height: 10px;
     background-color: #27A3A8;
 }
-.dcontainer div div h3 .span2::before{
+
+.dcontainer div div h3 .span2::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -1181,7 +1199,8 @@ h6 {
     height: 3px;
     background-color: #27A3A8;
 }
-.dcontainer div div h3 .span2::after{
+
+.dcontainer div div h3 .span2::after {
     content: "";
     position: absolute;
     top: 0;
@@ -1190,26 +1209,30 @@ h6 {
     height: 3px;
     background-color: #27A3A8;
 }
+
 /* ************************************************************REFERENCES.HTML************** ***********/
 /* ****************************************************************************************************** */
-.refheader{
+.refheader {
     display: inline-block;
     margin: 100px 40px 40px 40px;
 }
-.refheader h1{
+
+.refheader h1 {
     color: #27A3A8;
     font-weight: 700;
 }
-.refcontainer{
+
+.refcontainer {
     width: 100%;
     text-align: center;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+
 }
-.refcontainer > .refsample{
+
+.refcontainer>.refsample {
     min-width: 250px;
     height: 300px;
     margin: 40px;
@@ -1217,27 +1240,31 @@ h6 {
     position: relative;
     text-decoration: none;
     transition: .5s cubic-bezier(0.13, 0.4, 0, 4.03);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
 }
-.refcontainer .refsample div{
+
+.refcontainer .refsample div {
     width: 100%;
     height: 250px;
     background-color: gray;
     transition: .5s cubic-bezier(0.13, 0.4, 0, 4.03);
     position: relative;
 }
-.refcontainer .refsample h5{
+
+.refcontainer .refsample h5 {
     bottom: 0;
     line-height: 50px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
-.refcontainer > div div:hover{
+
+.refcontainer>div div:hover {
     transform: rotateZ(15deg);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.refcontainer  .refsample  div::before{
+
+.refcontainer .refsample div::before {
     content: "visit the site";
     cursor: pointer;
     overflow: hidden;
@@ -1250,102 +1277,204 @@ h6 {
     z-index: 5;
     transition: .5s ease-in-out;
 }
-.refcontainer .refsample div:hover::before{
+
+.refcontainer .refsample div:hover::before {
     height: 50%;
 }
 
 /* ***********************************************************************BLOG.HTML **********************/
 /* ******************************************************************************************************** */
-.blog-page-header{
+.blog-page-header {
     margin-left: 10%;
     margin-top: 50px;
     margin-bottom: 50px;
 }
-.blog-page-header h1{
+
+.blog-page-header h1 {
     color: #27A3A8;
     font-weight: 700;
 }
-.blog-body{
+
+.blog-body {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
-.blog-body > div{
+
+.blog-body>div {
     display: grid;
     grid-template-columns: 30% 70%;
     position: relative;
     margin-bottom: 100px;
 }
-.blog-body > div >div{
+
+.blog-body>div>div {
     margin-left: 50px;
 }
-.blog-body div:nth-child(1){
+
+.blog-body div:nth-child(1) {
     position: relative;
     height: auto;
 }
-.blog-body div:nth-child(1) img{
+
+.blog-body div:nth-child(1) img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
 }
+
 /********************************************************************************** WORK-SAMPLES.HTML *********/
 /* *********************************************************************************************************** */
-.active2{
+.active2 {
     transform: skew();
     font-weight: 900;
     transition: .2s ease-in-out;
 }
-.work-sample-header{
+
+.work-sample-header {
     margin-top: 100px;
     margin-left: 50px;
     display: block;
     margin-bottom: 20px;
 }
-.work-sample-header h1{
+
+.work-sample-header h1 {
     margin-bottom: 0px;
     font-weight: 700;
     color: #27a3a8;
 }
-.work-sample{
+
+.work-sample {
     margin-left: 20px;
 }
-.work-sample ul li{
+
+.work-sample ul li {
     display: inline-block;
     position: relative;
     margin: 0px 5px;
 }
-.work-sample ul li a{
+
+.work-sample ul li a {
     text-decoration: none;
     font-size: .7rem;
 }
-.work-sample ul li a:nth-child(odd){
+
+.work-sample ul li a:nth-child(odd) {
     color: black;
 }
-.work-sample ul li:nth-child(even){
+
+.work-sample ul li:nth-child(even) {
     margin-bottom: 5px;
     border-top: 1px solid #27a3a8;
     width: 10px;
     align-items: center;
     align-self: center;
 }
-.work-sample ul{
+
+.work-sample ul {
     list-style-type: none;
     position: relative;
 }
-.work-sample-2{
+
+.work-sample-2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.work-sample-2 > div{
+.work-sample-2>div {
     width: 300px;
-    height: 300px;
+    height: 200px;
     background-color: red;
-    margin: 10px;
+    margin: 30px;
 }
 
+/* **********************************************************CONTACT.HTML********************************************** */
+/* ************************************************************************************************************** */
+.contact-header{
+    margin-left: 190px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+.contact-header h1{
+    margin: 8px;
+    font-weight: 700;
+    color: #27a3a8 ;
+}
+.contact-header h6{
+    margin: 8px;
+}
+.inputs {
+    width: 80%;
+    text-align: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.inputs>div {
+    /* flex: 0; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inputs .input-left .input1 {
+    display: block;
+}
+
+.inputs .input-right .input2 {
+    display: block;
+}
+
+.inputs .input1 {
+    width: 420px;
+    height: 40px;
+    margin-bottom: 15px;
+    outline: none;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid red;
+}
+
+.input-right .input2:nth-child(1) {
+    width: 420px;
+    height: 40px;
+    margin-bottom: 15px;
+    outline: none;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid red;
+}
+
+.input-right .input2:nth-child(2) {
+    width: 420px;
+    height: 100px;
+    margin-bottom: 15px;
+    outline: none;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid red;
+}
+
+.input-right .input2:nth-child(3) {
+    float: right;
+    padding: 5px 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: #27a3a8 ;
+    cursor: pointer;
+    color: whitesmoke;
+
+}
 
 
 /* **************************************************************RESPONSİVE MOBILE   *************************************** */
@@ -1354,8 +1483,8 @@ h6 {
 /* ************************************************************************************************************ */
 
 @media only screen and (max-width: 650px) {
-/* ***********************************************************    İNDEX.HTML *************************************/
-/* ********************************************************************************************************* */
+    /* ***********************************************************    İNDEX.HTML *************************************/
+    /* ********************************************************************************************************* */
 
     .website {
         color: darkslategray !important;
@@ -1560,7 +1689,8 @@ h6 {
         display: block;
         padding-top: 10px;
     }
-    .footer-top-left div{
+
+    .footer-top-left div {
         margin-bottom: 5px;
     }
 
@@ -1601,102 +1731,124 @@ h6 {
         margin: auto;
     }
 
-/* **************************************************  WHO-WE-ARE.HTML ************************************** */
-/* ************************************************************************************************* */
-    #who{
+    /* **************************************************  WHO-WE-ARE.HTML ************************************** */
+    /* ************************************************************************************************* */
+    #who {
         text-align: center;
     }
-    #who h1{
+
+    #who h1 {
         margin-left: auto;
         margin-right: auto;
     }
+
     .website .whoweare div {
         margin-right: 10px;
         margin-left: 10px;
         padding-top: 30px;
         padding-bottom: 30px;
     }
-    .website .whoweare-container{
+
+    .website .whoweare-container {
         margin-top: 20px;
         display: block;
     }
-/* ***************************************************************DİGİTAL.HTML ******************/
-/* ************************************************************************************************** */
 
-    .dcontainer{
+    /* ***************************************************************DİGİTAL.HTML ******************/
+    /* ************************************************************************************************** */
+
+    .dcontainer {
         margin-left: auto;
         margin-bottom: auto;
         margin-right: auto;
         width: 100%;
     }
-    .dcontainer div{
+
+    .dcontainer div {
         display: block;
         width: 100%;
     }
-    .dcontainer div div:first-child img{
+
+    .dcontainer div div:first-child img {
         width: 100vw;
         height: 250px;
         object-fit: cover;
     }
-    .dcontainer div div:nth-child(2){
+
+    .dcontainer div div:nth-child(2) {
         margin-left: auto;
         text-align: center;
     }
-    .dcontainer div div:nth-child(3){
+
+    .dcontainer div div:nth-child(3) {
         margin-left: auto;
     }
-    .dcontainer div div h3{
+
+    .dcontainer div div h3 {
         margin: 20px;
     }
-    .dcontainer div div p{
+
+    .dcontainer div div p {
         display: block;
         width: 90%;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
     }
-    .dcontainer div div h3::before{
+
+    .dcontainer div div h3::before {
         display: none;
     }
+
     /* ****************************************************************BLOG.HTML *******************/
     /* ********************************************************************************************* */
-    .blog-body > div{
+    .blog-body>div {
         display: block;
         position: relative;
         margin-bottom: 50px;
     }
-    .blog-body > div > div{
+
+    .blog-body>div>div {
         margin-left: 0px;
     }
-    .blog-body > div:nth-child(1) img{
+
+    .blog-body>div:nth-child(1) img {
         position: relative;
         object-fit: cover;
     }
-    .blog-body > div:nth-child(2) img{
+
+    .blog-body>div:nth-child(2) img {
         position: relative;
         object-fit: cover;
     }
-    .blog-body > div:nth-child(3) img{
+
+    .blog-body>div:nth-child(3) img {
         position: relative;
         object-fit: cover;
     }
+
     /************************************************************ WORK-SAMPLES.HTML******************** */
     /* ************************************************************************************************** */
-    .work-sample-header h1{
+    .work-sample-header h1 {
         margin-left: auto;
         margin-right: auto;
         display: flex;
     }
-    .work-sample-header{
+
+    .work-sample-header {
         margin-left: auto;
         margin-right: auto;
         display: flex;
     }
-    .work-sample{
+
+    .work-sample {
         margin-left: auto;
         margin-right: auto;
         display: flex;
     }
+    /* ***************************************************************************CONTACT.HTML************************ */
+    /* ***************************************************************************************************************** */
+    
 }
 
 
@@ -1706,8 +1858,8 @@ h6 {
 /* **************************************************************************************************** */
 
 @media only screen and (min-width:651px) and (max-width: 1100px) {
-/* ***********************************************************    İNDEX.HTML *************************************/
-/* ********************************************************************************************************* */
+    /* ***********************************************************    İNDEX.HTML *************************************/
+    /* ********************************************************************************************************* */
 
     .navigation .logo img {
         width: 80%;
