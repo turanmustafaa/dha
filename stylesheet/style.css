@@ -128,13 +128,13 @@ body p {
 }
 
 .nav-links li a::after {
-    bottom: 0;
+    bottom: -3;
     content: "";
     display: block;
     height: 3px;
     left: 50%;
     position: absolute;
-    background: skyblue;
+    background: #27A3A8;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -145,9 +145,8 @@ body p {
 }
 
 .activeted {
-    background: linear-gradient(to bottom, #27a3a8, dodgerblue);
-    border-radius: 5px;
-    padding: 0px 5px;
+    position: absolute;
+    border-bottom: #27A3A8 solid 3px ;
 }
 
 
@@ -427,7 +426,7 @@ header {
 }
 
 .active {
-    background: linear-gradient(to bottom, #27a3a8, dodgerblue);
+    background: linear-gradient(to bottom, #27a3a8, gray);
     border-radius: 10px;
     text-decoration: none;
     padding: 10px;
@@ -1431,8 +1430,8 @@ h6 {
 
 /* **********************************************************CONTACT.HTML********************************************** */
 /* ************************************************************************************************************** */
-.contact-header{
-    margin-left: 190px;
+ .contact-header{
+    margin-left: 10%;
     margin-bottom: 50px;
     margin-top: 30px;
 }
@@ -1444,75 +1443,68 @@ h6 {
 .contact-header h6{
     margin: 8px;
 }
-.inputs {
+.form{
     width: 80%;
-    text-align: center;
-    display: flex;
     margin-left: auto;
     margin-right: auto;
-
+    margin-bottom: 100px;
 }
-
-.inputs>div {
-    /* flex: 0; */
-    margin-left: auto;
-    margin-right: auto;
+.form .form-inputs{
+    display: grid;
+    justify-content: space-between;
 }
-
-.inputs .input-left .input1 {
-    display: block;
-}
-
-.inputs .input-right .input2 {
-    display: block;
-}
-
-.inputs .input1 {
-    width: 420px;
-    height: 40px;
-    margin-bottom: 15px;
-    outline: none;
-
+.form .form-inputs input , .form-inputs textarea{
+    width: 400px;
+    height: 50px;
+    /* justify-self: stretch; */
+    /* height: 100%; */
     border-top: none;
+    border-bottom: 1px solid darkslategray;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid red;
-}
-
-.input-right .input2:nth-child(1) {
-    width: 420px;
-    height: 40px;
-    margin-bottom: 15px;
     outline: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid red;
+    /* line-height: 40px; */
+    transition: .5s ease-in-out;
+    transition-property: border;
+    font-size: 2vh;
+    font-family: 'Open Sans', sans-serif;
 }
-
-.input-right .input2:nth-child(2) {
-    width: 420px;
-    height: 100px;
-    margin-bottom: 15px;
-    outline: none;
-
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid red;
+.form .form-inputs input:focus{
+    border-bottom: 3px solid #2980b9;
 }
-
-.input-right .input2:nth-child(3) {
+.form .form-inputs textarea:focus{
+    border-bottom: 3px solid #2980b9;
+}
+.form .form-inputs textarea{
+    height: 100%;
+}
+.form .form-inputs >div:nth-child(1){
+    grid-column: 1 / span 1;
+    grid-row: 1;
+}
+.form .form-inputs >div:nth-child(2){
+    grid-column: 1 / span 1;
+    grid-row: 2;
+}
+.form .form-inputs >div:nth-child(3){
+    grid-column: 1 / span 1;
+    grid-row: 3;
+}
+.form .form-inputs >div:nth-child(4){
+    grid-column: 2 / span 1;
+    grid-row: 1;
+}
+.form .form-inputs >div:nth-child(5){
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 2;
+}
+.form .form-submit button {
     float: right;
-    padding: 5px 30px;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    background-color: #27a3a8 ;
-    cursor: pointer;
-    color: whitesmoke;
-
+    padding: 10px 20px;
 }
+
+
+
 
 
 /* **************************************************************RESPONSİVE MOBILE   *************************************** */
@@ -1886,7 +1878,13 @@ h6 {
     }
     /* ***************************************************************************CONTACT.HTML************************ */
     /* ***************************************************************************************************************** */
-    
+    .form .form-inputs{
+        display: block;
+        justify-content: center;
+    }
+    .form .form-inputs input , .form .form-inputs textarea{
+        width: 300px;
+    }
 }
 
 

@@ -130,7 +130,6 @@ var $btns2 = $(".btn2").on("click", function (e) {
 
 
   $('.nav-links ul li a').filter(function(){
-    console.log(location.href)
     return this.href === location.href;
   }).addClass('activeted');
   
