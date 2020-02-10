@@ -1307,29 +1307,28 @@ h6 {
     margin-right: auto;
 }
 
-.blog-body>div {
+.blog-body-content{
     display: grid;
-    grid-template-columns: 30% 70%;
-    position: relative;
-    margin-bottom: 100px;
+    grid-template-columns: 40% 60%;
+    justify-content: space-around;
+    margin-bottom: 50px;
 }
-
-.blog-body>div>div {
+.blog-body-content > div{
+    position: relative;
+    
+}
+.blog-body-content div:first-child img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.blog-body .blog-body-content div:last-child{
     margin-left: 50px;
 }
-
-.blog-body div:nth-child(1) {
-    position: relative;
-    height: auto;
+.blog-body .blog-body-content div:last-child a{
+    float: right;
+    text-decoration: none;
 }
-
-.blog-body div:nth-child(1) img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-}
-
 /********************************************************************************** WORK-SAMPLES.HTML *********/
 /* *********************************************************************************************************** */
 .active2 {
@@ -1444,7 +1443,7 @@ h6 {
     margin: 8px;
 }
 .form{
-    width: 80%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;
@@ -1456,14 +1455,12 @@ h6 {
 .form .form-inputs input , .form-inputs textarea{
     width: 400px;
     height: 50px;
-    /* justify-self: stretch; */
-    /* height: 100%; */
     border-top: none;
     border-bottom: 1px solid darkslategray;
     border-left: none;
     border-right: none;
     outline: none;
-    /* line-height: 40px; */
+    line-height: 50px;
     transition: .5s ease-in-out;
     transition-property: border;
     font-size: 2vh;
@@ -1498,9 +1495,17 @@ h6 {
     grid-column: 2 / span 1;
     grid-row: 2 / span 2;
 }
+.form .form-submit{
+    margin-top: 30px;
+}
 .form .form-submit button {
     float: right;
-    padding: 10px 20px;
+    padding: 20px 30px;
+    outline: none;
+    border: none;
+    background-color: #27a3a8;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 
@@ -1832,31 +1837,12 @@ h6 {
 
     /* ****************************************************************BLOG.HTML *******************/
     /* ********************************************************************************************* */
-    .blog-body>div {
+    .blog-body-content{
         display: block;
-        position: relative;
-        margin-bottom: 50px;
     }
-
-    .blog-body>div>div {
+    .blog-body .blog-body-content div:last-child{
         margin-left: 0px;
     }
-
-    .blog-body>div:nth-child(1) img {
-        position: relative;
-        object-fit: cover;
-    }
-
-    .blog-body>div:nth-child(2) img {
-        position: relative;
-        object-fit: cover;
-    }
-
-    .blog-body>div:nth-child(3) img {
-        position: relative;
-        object-fit: cover;
-    }
-
     /************************************************************ WORK-SAMPLES.HTML******************** */
     /* ************************************************************************************************** */
     .work-sample-header h1 {
@@ -1883,8 +1869,12 @@ h6 {
         justify-content: center;
     }
     .form .form-inputs input , .form .form-inputs textarea{
-        width: 300px;
+        width: 100%;
     }
+    .form .form-inputs textarea{
+        height: 100px;
+    }
+
 }
 
 
