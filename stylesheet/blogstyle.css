@@ -1,0 +1,68 @@
+
+.blog-head-image{
+    margin: 50px;
+}
+.blog-head-image img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.blog-content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    
+}
+.blog-content-left{
+    overflow: scroll;
+    height: 100vh;
+    scrollbar-width: 1px;
+    width: 95%;
+}
+.blog-content-right{
+    overflow: hidden;
+    text-align: center;
+    z-index: 5;
+}
+.blog-content-right .right-content > div{
+    margin-bottom: 30px;
+}
+.blog-content-right .right-content div div:first-child img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+.blog-content-right .right-content div div:last-child a{
+    text-decoration: none;
+    font-weight: 700;
+}
+.blog-content-right .right-sm{
+    margin-bottom: 50px;
+}
+.blog-content-right .right-sm div h5{
+    font-weight: 700;
+}
+.blog-content-right .right-sm a{
+    margin: 0px 10px;
+}
+/* ******************************************************************************************MOBİL******* */
+/* ************************************************************************************************************* */
+/* *************************************************************************************************************** */
+@media only screen and (max-width: 650px){
+.blog-content{
+    display: block;
+}
+.blog-content-left{
+    width: 100%;
+    overflow: hidden;
+}
+.blog-head-image{
+    margin: 10px;
+}
+.blog-content-right .right-content div div:first-child img{
+    width: 80%;
+}
+}
