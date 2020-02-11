@@ -62,7 +62,45 @@ window.onload = function () {
       prevEl: '.swiper-button-p',
     },
 
+    
   });
+
+  var ThirthSwiper = new Swiper('.ref-slider', {
+    direction: 'horizontal',
+    setWrapperSize: false,
+    autoHeight: true,
+    effect: 'slide',
+    watchOverFlow: false,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 150,
+    init: true,
+    breakpoints: {
+
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 40,
+        slidesPerGroup: 1
+      },
+      1100: {
+        slidePerView: 3,
+        spaceBetween: 10,
+      }
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+  });
+
+  
+ 
 
 // ANASAYFA FİLTER BLOGU////////////////////////////////////
 

@@ -10,6 +10,7 @@
     margin-left: auto; */
 }
 
+
 ::-webkit-scrollbar {
     z-index: 100;
     background-color: whitesmoke;
@@ -552,7 +553,7 @@ header {
     margin-right: auto;
 }
 
-.digital-pros .swiper-slide {
+.digital-pros .digital-slider .swiper-wrapper .swiper-slide {
     text-align: center;
     width: 200px;
     min-height: 350px;
@@ -882,6 +883,37 @@ h6 {
     background-color: #27A3A8;
 }
 
+.ref-slider .swiper-wrapper .swiper-slide{
+    width: 300px;
+    height: 200px;
+    
+}
+.ref-slider .swiper-wrapper .swiper-slide:nth-child(1){
+    background-color: red;
+}
+.ref-slider .swiper-wrapper .swiper-slide:nth-child(2){
+    background-color: blue;
+}
+.ref-slider .swiper-wrapper .swiper-slide:nth-child(3){
+    background-color: purple;
+}
+.ref-slider .swiper-wrapper .swiper-slide:nth-child(4){
+    background-color: red;
+}
+.ref-slider .swiper-wrapper .swiper-slide:nth-child(5){
+    background-color: green;
+}
+.ref-slider .swiper-wrapper .swiper-slide:nth-child(6){
+    background-color: orangered;
+}
+.refer .ref-slider {
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
 /* FOOTER************************************************************************ */
 .footer {
     /* margin-top: 100px; */
@@ -1461,7 +1493,7 @@ h6 {
     border-right: none;
     outline: none;
     line-height: 50px;
-    transition: .5s ease-in-out;
+    transition: 250ms ease-in-out;
     transition-property: border;
     font-size: 2vh;
     font-family: 'Open Sans', sans-serif;
@@ -1500,12 +1532,27 @@ h6 {
 }
 .form .form-submit button {
     float: right;
-    padding: 20px 30px;
+    padding: 10px 30px;
     outline: none;
-    border: none;
-    background-color: #27a3a8;
+    /* border: none; */
+    /* background-color: #27a3a8; */
     border-radius: 5px;
     cursor: pointer;
+    background-color: transparent;
+    border: 3px solid #27a3a8;
+    border-radius: 5px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    color: #27a3a8;
+    transition-delay: 100ms;
+}
+.form .form-submit button:hover{
+    box-shadow: 0 0 7px 0 #27a3a8 inset, 0 0 2px 2px #27a3a8;
+    border: 3px solid #27a3a8;
+    background-color: #1cc6cc ;
+    color: whitesmoke;
+    font-size: .7rem;
+    font-weight: 900;
 }
 
 
