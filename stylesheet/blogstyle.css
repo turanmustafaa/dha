@@ -65,4 +65,7 @@
 .blog-content-right .right-content div div:first-child img{
     width: 80%;
 }
+.blog-content-right{
+    margin-top: 50px;
+}
 }
