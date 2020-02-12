@@ -1266,11 +1266,12 @@ h6 {
     transition: .5s cubic-bezier(0.13, 0.4, 0, 4.03);
     position: relative;
 }
-.refcontainer .refsample div a{
+.refcontainer .refsample div img{
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
+    object-fit: cover;
 }
 
 .refcontainer .refsample h5 {
@@ -2057,4 +2058,7 @@ h6 {
     .refer .refer-header div h1 {
         font-size: 1.6rem;
     }
+    /* ***********************************************************************************DİGİTAL.HTML**** */
+    /* **************************************************************************************************** */
+    
 }

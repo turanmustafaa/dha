@@ -170,8 +170,22 @@ var $btns2 = $(".btn2").on("click", function (e) {
   $('.nav-links ul li a').filter(function(){
     return this.href === location.href;
   }).addClass('activeted');
+
+
+
+  // $('.works-2').on('click', function(e){
+  //     $('.works-3').css("display","inline-block").not('.works-3 ul li:first-child')
+  //     var a = e.target
+  //     // console.log(a)
+  //     if(a === $('.works-2 ul li a').parent().first()){
+  //       console.log(a)
+  //       $('.works-3').css("display", "grid")
+  //     }
+  //     // console.log($('.works-2 ul li a').parent().first())
+  // })
   
  }
+
 
 
 
