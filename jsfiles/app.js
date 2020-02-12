@@ -154,7 +154,6 @@ var $btns2 = $(".btn2").on("click", function (e) {
     }
   });
 
-
   $(".hamburger").on("click", function () {
     $(this).toggleClass("change");
     $(".nav-links").slideToggle();
@@ -164,6 +163,8 @@ var $btns2 = $(".btn2").on("click", function (e) {
       //   $("#hamburger div").addClass("scroll-down");
     }
   });
+
+
   // NAVİGATİON ACTİVE CLASS///////////////////////
 
 
@@ -171,74 +172,32 @@ var $btns2 = $(".btn2").on("click", function (e) {
     return this.href === location.href;
   }).addClass('activeted');
 
+ 
+
+  //ANASAYFA İŞLERİMİZ CONTAİNERININ GRİD YAPISININ YENİDEN OLUSTURULMASI///////////
 
 
-  // $('.works-2').on('click', function(e){
-  //     $('.works-3').css("display","inline-block").not('.works-3 ul li:first-child')
-  //     var a = e.target
-  //     // console.log(a)
-  //     if(a === $('.works-2 ul li a').parent().first()){
-  //       console.log(a)
-  //       $('.works-3').css("display", "grid")
-  //     }
-  //     // console.log($('.works-2 ul li a').parent().first())
-  // })
+   $vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+   $vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  // console.log($vw)
   
+  var index = document.querySelectorAll('.works-2 ul li a');
+  var viewport = $vw
+
+  if(viewport > 650){
+  $('.works-2').on('click', function(e){
+      $('.works-3').css("display","flex")
+      var a = e.target
+      var b = index[0]
+      if(a === b){
+        $('.works-3').css("display", "grid")
+      }
+      // else if (a !== b ){
+      //   $('.works-3 div').css({"width":"200px","height":"200px"})
+      // }
+  })
+}
  }
 
 
 
-
-// $(".nav-links ul li a").on("click",function(){
-//     $this = $(this)
-//   if($this.href === location.href){
-//     $this.addClass("activeted")
-//   }
-// })
-  
-  // activeted class versiyon 1///////////////////////////////////////////
-
-  // $('.nav-links ul li').on("click", function() {
-  //   // e.preventDefault();
-  //   $(function () {
-  //     setNavigation();
-  //   });
-    
-  //   function setNavigation() {
-  //     var path = window.location.pathname;
-  //     path = path.replace(/\/$/, "");
-  //     path = decodeURIComponent(path);
-  //     var href = $(this).attr('href');
-
-  //     var loc = window.location.pathname;
-
-  //     $('.nav-links ul li a').removeClass("activeted");
-  //     $(this).addClass("activeted", $(this).attr('href') == loc);
-    
-  
-  //   }
-      
-  // })
-
-
-// active class versiyon 2///////
-
-
-  // $(".nav-links ul li").click(function(){
-  // $('.nav-links ul li a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('activeted');
-  
-  // }) 
-
-
-
-  
-  // activeted classs 3versiyon ////////////////////////////////////
-
-  // $('.nav-links ul li').click(function(){
-  //   //  e.preventDefault();
-  //   $this = $(this)
-  //   console.log($this)
-  //   $(this).parent().children().not(this).removeClass("activeted")
-  //     $(this).parent('li').addClass("activeted")
-      
-  // })
