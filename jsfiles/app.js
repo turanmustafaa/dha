@@ -177,26 +177,23 @@ var $btns2 = $(".btn2").on("click", function (e) {
   //ANASAYFA İŞLERİMİZ CONTAİNERININ GRİD YAPISININ YENİDEN OLUSTURULMASI///////////
 
 
-   $vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-   $vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-  // console.log($vw)
+//    $vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+//    $vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+//   // console.log($vw)
   
-  var index = document.querySelectorAll('.works-2 ul li a');
-  var viewport = $vw
+//   var index = document.querySelectorAll('.works-2 ul li a');
+//   var viewport = $vw
 
-  if(viewport > 650){
-  $('.works-2').on('click', function(e){
-      $('.works-3').css("display","flex")
-      var a = e.target
-      var b = index[0]
-      if(a === b){
-        $('.works-3').css("display", "grid")
-      }
-      // else if (a !== b ){
-      //   $('.works-3 div').css({"width":"200px","height":"200px"})
-      // }
-  })
-}
+//   if(viewport > 650){
+//   $('.works-2').on('click', function(e){
+//       $('.works-3').css("display","flex")
+//       var a = e.target
+//       var b = index[0]
+//       if(a === b){
+//         $('.works-3').css("display", "grid")
+//       }
+//   })
+// }
  }
 
 
