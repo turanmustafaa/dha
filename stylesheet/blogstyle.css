@@ -17,9 +17,6 @@
     
 }
 .blog-content-left{
-    overflow: scroll;
-    height: 100vh;
-    scrollbar-width: 1px;
     width: 95%;
 }
 .blog-content-right{
