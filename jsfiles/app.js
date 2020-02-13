@@ -165,7 +165,7 @@ var $btns2 = $(".btn2").on("click", function (e) {
   });
 
 
-  // NAVİGATİON ACTİVE CLASS///////////////////////
+  // NAVİGATİON BAR ACTİVE CLASS///////////////////////
 
 
   $('.nav-links ul li a').filter(function(){

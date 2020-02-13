@@ -2,6 +2,10 @@
     width: device-width ;
     zoom: 3.0 ;
   } */
+
+  .error_msg{
+      background-color: orangered;
+  }
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +35,7 @@ body {
     width: 100%;
     overflow: hidden;
     min-height: 100vh;
+
 }
 
 /* ****************************************************İNDEX.HTML *************************************** */
@@ -1121,7 +1126,7 @@ h6 {
     padding-bottom: 5px;
 }
 
-/* **************************************************************DİGİTAL.HTML ************************************/
+/* **************************************************************DIGITAL.HTML ************************************/
 /* ***************************************************************************************** **************/
 .digital-1 {
     width: auto;
@@ -1861,7 +1866,7 @@ h6 {
         margin-bottom: 50px;
     }
 
-    /* ***************************************************************DİGİTAL.HTML ******************/
+    /* ***************************************************************DIGITAL.HTML ******************/
     /* ************************************************************************************************** */
     .digital-1{
         width: 100%;
@@ -2087,7 +2092,68 @@ h6 {
     .refer .refer-header div h1 {
         font-size: 1.6rem;
     }
-    /* ***********************************************************************************DİGİTAL.HTML**** */
+    /* ***********************************************************************************DIGITAL.HTML**** */
     /* **************************************************************************************************** */
+    .dcontainer {
+        margin-left: 10px;
+        margin-right: auto;
+        margin-bottom: 50px;
+        width: 90%;
+    }
     
+    .dcontainer div {
+        display: grid;
+        width: 100%;
+    }
+    
+    .dcontainer div div h3 {
+        font-weight: 700;
+    }
+    
+    .dcontainer div div:first-child {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+        height: auto;
+        position: relative;
+    
+    }
+    
+    .dcontainer div div:first-child img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .dcontainer div div:nth-child(2) {
+        margin-left: 20px;
+    }
+    
+    .dcontainer div div:nth-child(3) {
+        margin-left: 20px;
+    }   
+
+    /*********************************************************************************** CONTACT.HTML ****/
+    /* ***************************************************************************************************** */
+    .form{
+        /* margin-bottom: 200px; */
+    }
+    .form .form-inputs{
+        display: block;
+        justify-content: center;
+    }
+    .form .form-inputs input , .form .form-inputs textarea{
+        width: 100%;
+    }
+    .form .form-inputs textarea{
+        height: 100px;
+    }
+    .contact-header{
+        margin-left: auto;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
 }
