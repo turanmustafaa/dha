@@ -2,7 +2,24 @@
     width: device-width ;
     zoom: 3.0 ;
   } */
-
+  .fs-xs{
+      font-size: 12px;
+  }
+ .fs-sm{
+     font-size: 14px;
+ }
+ .fs-m{
+     font-size: 18px;
+ }
+ .fs-lg{
+     font-size: 22px;
+ }
+ .fs-xl{
+     font-size: 26px;
+ }
+ .fs-2xl{
+     font-size: 32px;
+ }
   .error_msg{
       background-color: orangered;
   }
@@ -40,9 +57,6 @@ body {
 
 /* ****************************************************İNDEX.HTML *************************************** */
 /* ********************************************************************************************************* */
-body p {
-    font-size: 12px;
-}
 
 .hamburger {
     /* width: 70px;
@@ -721,6 +735,7 @@ h6 {
 }
 
 .blog .blog-header div h1 {
+    font-weight: 700;
     color: white;
     position: relative;
     display: inline-block;
@@ -965,8 +980,16 @@ h6 {
 .footer-top-left div {
     color: whitesmoke;
     font-weight: 700;
-    font-size: .7em;
+    cursor: pointer;
 }
+/* .footer-top-left div:hover{
+    animation: spin 1s linear infinite;
+    transform-origin: center;
+}
+@keyframes spin { 
+    100% { 
+         transform:rotate(360deg); } 
+        } */
 
 .footer-top-right {
     margin-right: 3%;
@@ -1011,7 +1034,6 @@ h6 {
 
 .footer-bottom-left p {
     font-weight: 700;
-    font-size: .8rem;
 }
 
 .footer-bottom-left i {
@@ -1044,12 +1066,10 @@ h6 {
 
 .footer-bottom-right .foot-item1 p {
     margin: 0 0 0 0;
-    font-size: .7rem;
 }
 
 .footer-bottom-right .foot-item2 li {
     margin: 0 3px 0 3px;
-    font-size: .7rem;
     font-weight: 700;
 }
 
@@ -1077,7 +1097,6 @@ h6 {
 }
 
 .website .whoweare div p {
-    font-size: .8rem;
     color: whitesmoke;
 }
 
@@ -1086,7 +1105,7 @@ h6 {
 }
 
 #who {
-    margin-top: 120px;
+    margin-top: 50px;
 }
 
 #who h1 {
@@ -1130,9 +1149,9 @@ h6 {
 /* ***************************************************************************************** **************/
 .digital-1 {
     width: auto;
-    margin-left: 10%;
+    margin-left: 100px;
     display: inline-block;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .digital-1 div h1 {
@@ -1262,7 +1281,7 @@ h6 {
 /* ****************************************************************************************************** */
 .refheader {
     display: inline-block;
-    margin: 100px 40px 40px 40px;
+    margin: 50px 40px 40px 100px;
 }
 
 .refheader h1 {
@@ -1343,7 +1362,7 @@ h6 {
 .blog-page-header {
     margin-left: 10%;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .blog-page-header h1 {
@@ -1388,8 +1407,8 @@ h6 {
 }
 
 .work-sample-header {
-    margin-top: 100px;
-    margin-left: 50px;
+    margin-top: 50px;
+    margin-left: 100px;
     display: block;
     margin-bottom: 20px;
 }
@@ -1401,7 +1420,7 @@ h6 {
 }
 
 .work-sample {
-    margin-left: 20px;
+    margin-left: 100px;
 }
 
 .work-sample ul li {
@@ -1480,9 +1499,9 @@ h6 {
 /* **********************************************************CONTACT.HTML********************************************** */
 /* ************************************************************************************************************** */
  .contact-header{
-    margin-left: 10%;
+    margin-left: 100px;
     margin-bottom: 50px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .contact-header h1{
     margin: 8px;
