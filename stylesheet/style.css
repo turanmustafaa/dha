@@ -1738,7 +1738,9 @@ header {
     .works-2 ul {
         flex-wrap: wrap;
     }
-    
+    .works-2 ul li {
+        margin: 0 10px;
+    }
 
 
     .works-2 li:nth-child(even) {
