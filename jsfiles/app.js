@@ -108,9 +108,9 @@ window.onload = function () {
   var $btns = $(".btn").on("click", function (e) {
 
     var active =
-      $btns.removeClass("active")
+      $btns.removeClass("active2")
       .filter(this)
-      .addClass("active")
+      .addClass("active2")
       .data("filter");
 
     $boxs
