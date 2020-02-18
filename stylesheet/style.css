@@ -684,11 +684,13 @@ header {
     margin-bottom: 10px;
 }
 .digital-pros .swiper-slide p {
-    font-size: 2.5vh;
+    font-size: 2.2vh;
+    color: black;
 }
 
 .digital-pros .swiper-slide h5 {
-    font-weight: 400;
+    /* font-weight: 400; */
+    color: black;
 }
 .digital-pros .swiper-slide h4 {
     font-weight: 700;
@@ -846,6 +848,7 @@ header {
 
 .blog .blog-slider .swipe .swipe-content h5 {
     margin-bottom: 0px;
+    color: whitesmoke;
 }
 
 .blog .blog-slider .swipe .swipe-content p {
@@ -2168,9 +2171,10 @@ header {
 
     /*********************************************************************************** CONTACT.HTML ****/
     /* ***************************************************************************************************** */
-    .form{
-        /* margin-bottom: 200px; */
-    }
+    /* .form{
+        margin-bottom: 200px;
+    }*/
+    
     .form .form-inputs{
         display: block;
         justify-content: center;
