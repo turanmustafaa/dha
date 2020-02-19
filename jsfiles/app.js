@@ -194,15 +194,15 @@ window.onload = function () {
   // }
 
 
-
   var formelement = document.querySelector(".form")
   var name = document.getElementById("contact-name");
   var email = document.getElementById("contact-email");
   var phonenm = document.getElementById("contact-phone");
   var head = document.getElementById("contact-head");
   var msg = document.getElementById("contact-message");
-
+  
   formelement.addEventListener("submit", function (e) {
+    
     setTimeout(function () {
       $('.showmessage').fadeOut()
     }, 2000)
@@ -214,5 +214,6 @@ window.onload = function () {
     msg.value = ""
     e.preventDefault()
   })
+
 
 }

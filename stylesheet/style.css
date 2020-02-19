@@ -1359,6 +1359,7 @@ header {
     bottom: 0;
 }
 .refsample div span i{
+    color:  whitesmoke;
     top: 50%;
     position: absolute;
     left: 50%;
