@@ -1493,15 +1493,36 @@ header {
   .flipfront {
     background-color: #bbb;
     color: black;
+    overflow: hidden;
   }
-  
+  .flipfront img{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+  }
   .flipback {
     background-color: #2980b9;
     color: white;
     transform: rotateY(180deg);
   }
   
-
+  .flipback div{
+      width: 50%;
+      height: auto;
+      top: 10%;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+  }
+.flipback div p{
+    /* position: absolute; */
+    width: 100%;
+    /* float: left; */
+    text-align: center;
+}
 /* **********************************************************CONTACT.HTML********************************************** */
 /* ************************************************************************************************************** */
  .contact-header{
@@ -1597,7 +1618,9 @@ header {
     font-size: .7rem;
     font-weight: 900;
 }
-
+.showmessage{
+    display: none;
+}
 
 
 

@@ -99,8 +99,21 @@ window.onload = function () {
 
   });
 
+  //  var inputs = document.querySelectorAll(".form-inputs input")
+  //  var form = document.querySelector(".form")
+  //  var btn = document.querySelector(".btn1")
+  //  var b = document.querySelector(".showmessage")
+
+  //  btn.addEventListener('sumbit'),(e) => {
+  //   if(inputs.values !== ''){
+      
+  //    console.log(b)
+  //    e.preventDefault();
+  //   }
+    
+  //  }
   
- 
+   
 
 // ANASAYFA FİLTER BLOGU////////////////////////////////////
 
