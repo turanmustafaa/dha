@@ -62,7 +62,7 @@ window.onload = function () {
       prevEl: '.swiper-button-p',
     },
 
-    
+
   });
 
   var ThirthSwiper = new Swiper('.ref-slider', {
@@ -99,23 +99,10 @@ window.onload = function () {
 
   });
 
-  //  var inputs = document.querySelectorAll(".form-inputs input")
-  //  var form = document.querySelector(".form")
-  //  var btn = document.querySelector(".btn1")
-  //  var b = document.querySelector(".showmessage")
 
-  //  btn.addEventListener('sumbit'),(e) => {
-  //   if(inputs.values !== ''){
-      
-  //    console.log(b)
-  //    e.preventDefault();
-  //   }
-    
-  //  }
-  
-   
 
-// ANASAYFA FİLTER BLOGU////////////////////////////////////
+
+  // ANASAYFA FİLTER BLOGU////////////////////////////////////
 
   var $boxs = $(".grid-item");
   var $btns = $(".btn").on("click", function (e) {
@@ -133,23 +120,23 @@ window.onload = function () {
     e.preventDefault();
   });
 
-// WORK-SAMPLES FİLTER////////////////////////////////////
+  // WORK-SAMPLES FİLTER////////////////////////////////////
 
-var $boxs2 = $(".grid-list");
-var $btns2 = $(".btn2").on("click", function (e) {
+  var $boxs2 = $(".grid-list");
+  var $btns2 = $(".btn2").on("click", function (e) {
 
-  var activework =
-    $btns2.removeClass("active2")
-    .filter(this)
-    .addClass("active2")
-    .data("filter2");
+    var activework =
+      $btns2.removeClass("active2")
+      .filter(this)
+      .addClass("active2")
+      .data("filter2");
 
-  $boxs2
-    .hide()
-    .filter("." + activework)
-    .fadeIn();
-  e.preventDefault();
-});
+    $boxs2
+      .hide()
+      .filter("." + activework)
+      .fadeIn();
+    e.preventDefault();
+  });
 
 
 
@@ -179,35 +166,53 @@ var $btns2 = $(".btn2").on("click", function (e) {
 
 
   // NAVİGATİON BAR ACTİVE CLASS///////////////////////
-
-
-  $('.nav-links ul li a').filter(function(){
+  $('.nav-links ul li a').filter(function () {
     return this.href === location.href;
   }).addClass('activeted');
 
- 
+
 
   //ANASAYFA İŞLERİMİZ CONTAİNERININ GRİD YAPISININ YENİDEN OLUSTURULMASI///////////
 
 
-//    $vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-//    $vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-//   // console.log($vw)
-  
-//   var index = document.querySelectorAll('.works-2 ul li a');
-//   var viewport = $vw
+  //    $vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  //    $vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  //   // console.log($vw)
 
-//   if(viewport > 650){
-//   $('.works-2').on('click', function(e){
-//       $('.works-3').css("display","flex")
-//       var a = e.target
-//       var b = index[0]
-//       if(a === b){
-//         $('.works-3').css("display", "grid")
-//       }
-//   })
-// }
- }
+  //   var index = document.querySelectorAll('.works-2 ul li a');
+  //   var viewport = $vw
 
+  //   if(viewport > 650){
+  //   $('.works-2').on('click', function(e){
+  //       $('.works-3').css("display","flex")
+  //       var a = e.target
+  //       var b = index[0]
+  //       if(a === b){
+  //         $('.works-3').css("display", "grid")
+  //       }
+  //   })
+  // }
 
 
+
+  var formelement = document.querySelector(".form")
+  var name = document.getElementById("contact-name");
+  var email = document.getElementById("contact-email");
+  var phonenm = document.getElementById("contact-phone");
+  var head = document.getElementById("contact-head");
+  var msg = document.getElementById("contact-message");
+
+  formelement.addEventListener("submit", function (e) {
+    setTimeout(function () {
+      $('.showmessage').fadeOut()
+    }, 2000)
+    $(".showmessage").css("display", "block");
+    name.value = ""
+    email.value = ""
+    phonenm.value = ""
+    head.value = ""
+    msg.value = ""
+    e.preventDefault()
+  })
+
+}

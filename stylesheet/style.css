@@ -2,6 +2,9 @@
     width: device-width ;
     zoom: 3.0 ;
   } */
+  p, ul, ol, dl, pre, address, fieldset, figure{
+      margin: 0 0 0 0 !important;
+  }
   .fs-xs{
       font-size: 12px;
   }
@@ -1525,6 +1528,9 @@ header {
 }
 /* **********************************************************CONTACT.HTML********************************************** */
 /* ************************************************************************************************************** */
+.contant-mean{
+    min-height: 500px;
+}
  .contact-header{
     margin-left: 100px;
     margin-bottom: 50px;
@@ -1594,7 +1600,7 @@ header {
 .form .form-submit{
     margin-top: 30px;
 }
-.form .form-submit button {
+.form .form-submit input {
     float: right;
     padding: 10px 30px;
     outline: none;
@@ -1610,7 +1616,7 @@ header {
     color: #27a3a8;
     transition-delay: 100ms;
 }
-.form .form-submit button:hover{
+.form .form-submit input:hover{
     box-shadow: 0 0 7px 0 #27a3a8 inset, 0 0 2px 2px #27a3a8;
     border: 3px solid #27a3a8;
     background-color: #1cc6cc ;
@@ -1620,7 +1626,46 @@ header {
 }
 .showmessage{
     display: none;
+    float: right;
+    margin-right: 200px;
+    background-color: #28a745;
+    padding: 50px 50px;
+    border-radius: 5px;
+    color: wheat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
 }
+.showmessage p i{
+    animation-name: myanime;
+    animation-duration: 1.6s;
+    transition: 1.6s ease-in-out;
+}
+@keyframes myanime{
+    0% {
+        transform: scale(2,2);
+       
+    }
+    20% {
+        transform: scale(1.3,1.3);
+       
+    }
+    40% {
+        transform: scale(1.5,1.5);
+       
+    }
+    60% {
+        transform: scale(1.4,1.4);
+       
+    }
+    100% {
+        transform: scale(3,3);
+       
+    }
+}
+
 
 
 

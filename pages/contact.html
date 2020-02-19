@@ -40,27 +40,42 @@
             </div>
         </nav>
 
-        <div class="contact-header">
-            <h1>Randevu</h1>
-            <h6>Randevu için bilgileriniz ekleyin, bize göderin. Size enuygun zamanı belirleyelim</h6>
-        </div>
-        <form class="form" id="myForm">
-            <div class="form-inputs">
-                <div><input type="text" name="name" placeholder="Adınız ve Soyadınız..." required></div>
-                <div><input type="text" name="email" placeholder="Eposta Adresiniz..." required></div>
-                <div><input type="text" name="phonenumber" placeholder="Telefon Numaranız..." required></div>
-                <div><input type="text" placeholder="Konu Baslıgı..." required></div>
-                <div><textarea name="" id="" placeholder="Mesajınız..."></textarea></div>
+        <div class="contant-mean">
+
+            <div class="contact-header">
+                <h1>Randevu</h1>
+                <h6>Randevu için bilgileriniz ekleyin, bize göderin. Size enuygun zamanı belirleyelim</h6>
             </div>
-            <div class="form-submit"><button type="button" class="btn1">GONDER</button></div>
-            <div class="showmessage">mesajınız basarıyla iletildi ..</div>    
-        </form>
+            <form class="form">
+                <div class="form-inputs">
+                    <div><input type="text" name="name" placeholder="Adınız ve Soyadınız..." id="contact-name" required>
+                    </div>
+                    <div><input type="text" name="email" placeholder="Eposta Adresiniz..." id="contact-email" required>
+                    </div>
+                    <div><input type="text" name="phonenumber" placeholder="Telefon Numaranız..." id="contact-phone"
+                            required></div>
+                    <div><input type="text" placeholder="Konu Baslıgı..." id="contact-head" required></div>
+                    <div><textarea name="" placeholder="Mesajınız..." id="contact-message" required></textarea></div>
+                </div>
+                <div class="form-submit">
+                    <input type="submit" class="btn1" value="GONDER">
+                </div>
+            </form>
+        </div>
+        <div class="showmessage">
+            <p> mesajınız basarıyla iletildi <br> <i class="fas fa-thumbs-up"></i></p>
+        </div>
         <footer class="footer">
             <div class="footer-top">
                 <div class="footer-top-left">
-                    <div class="fs-sm"><a style="text-decoration: none; color: whitesmoke;" href="https://api.whatsapp.com/send?phone=905336131073&text=Merhaba"> <i class="fab fa-whatsapp"></i>0533 613 1073</a></div>
-                    <div class="fs-sm"><a style="text-decoration: none; color: whitesmoke;" href="tel:+90216327048"><i class="fas fa-phone-alt"></i>0216 32 70 48</a></div>
-                    <div class="fs-sm"><a style="text-decoration: none; color: whitesmoke;" href="mailto:info@digitalhealtagency.com"><i class="far fa-envelope"></i> info@digitalhealtagency.com</a></div>
+                    <div class="fs-sm"><a style="text-decoration: none; color: whitesmoke;"
+                            href="https://api.whatsapp.com/send?phone=905336131073&text=Merhaba"> <i
+                                class="fab fa-whatsapp"></i>0533 613 1073</a></div>
+                    <div class="fs-sm"><a style="text-decoration: none; color: whitesmoke;" href="tel:+90216327048"><i
+                                class="fas fa-phone-alt"></i>0216 32 70 48</a></div>
+                    <div class="fs-sm"><a style="text-decoration: none; color: whitesmoke;"
+                            href="mailto:info@digitalhealtagency.com"><i class="far fa-envelope"></i>
+                            info@digitalhealtagency.com</a></div>
                 </div>
                 <div class="footer-top-right">
                     <a href="../index.html"><img src="../dha-images/Vector Smart Object copy 5.png" alt=""></a>
