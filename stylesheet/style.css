@@ -234,6 +234,7 @@ header {
     transform: translate(-70%, -50%);
 }
 
+
 .header-right button::after {
     content: "";
     position: absolute;
@@ -277,6 +278,9 @@ header {
     display: inline-block;
     background-color: white;
     transform: translate(50%, -50%);
+}
+.header .header-right div:nth-child(3)  {
+    margin-bottom: 30px;
 }
 
 /* BİZ KİMİZ  *************************************************************************/
@@ -394,6 +398,7 @@ header {
     padding-top: 120px;
     text-align: center;
     font-size: .7em;
+    padding-bottom: 50px;
 }
 
 .works-1 h1 {
@@ -687,7 +692,7 @@ header {
     margin-bottom: 10px;
 }
 .digital-pros .swiper-slide p {
-    font-size: 2.2vh;
+    font-size: 15px;
     color: black;
 }
 
@@ -840,7 +845,9 @@ header {
     position: absolute;
     bottom: 0;
     background-color: darkslategray ;
-    color: wheat;
+    color: whitesmoke;
+    width: 100%;
+    font-weight: 400;
 }
 .blog .blog-slider .swipe img{
     position: absolute;
@@ -856,8 +863,8 @@ header {
 
 .blog .blog-slider .swipe .swipe-content p {
     margin-bottom: 0px;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 14px;
+    /* font-weight: 400; */
 }
 
 .blog .swiper-pagination {
@@ -981,12 +988,14 @@ header {
 
 .footer-top-left div i {
     color: darkslategray;
+    margin-right: 9px;
 }
 
 .footer-top-left div {
     color: whitesmoke;
     font-weight: 700;
     cursor: pointer;
+    margin-bottom: 3px;
 }
 /* .footer-top-left div:hover{
     animation: spin 1s linear infinite;
@@ -1009,6 +1018,7 @@ header {
 .footer-bottom {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 30px;
 }
 
 .footer-bottom-right {
@@ -1063,11 +1073,14 @@ header {
     text-decoration: none;
     transition: color .3s ease-in-out;
     box-shadow: inset 0px -5px 5px 4px rgba(0, 0, 0, .1);
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
 }
 
 .footer-bottom-middle i:hover {
-    background-color: teal;
-    color: darkslategrey;
+    background-color: whitesmoke;
+    color: #27A3A8;
 }
 
 .footer-bottom-right .foot-item1 p {
@@ -1075,7 +1088,7 @@ header {
 }
 
 .footer-bottom-right .foot-item2 li {
-    margin: 0 3px 0 3px;
+    margin: 0 5px 0 5px;
     font-weight: 700;
 }
 
@@ -1974,13 +1987,14 @@ header {
         margin-right: auto;
         margin-left: auto;
         text-align: center;
+        margin-bottom: 30px;
     }
     .digital-1 div p{
         float: none;
     }
     .dcontainer {
         margin-left: auto;
-        margin-bottom: auto;
+        margin-bottom: 50px;
         margin-right: auto;
         width: 100%;
     }
@@ -2003,6 +2017,8 @@ header {
 
     .dcontainer div div:nth-child(3) {
         margin-left: auto;
+        width: 90%;
+        margin-right: auto;
     }
 
     .dcontainer div div h3 {
@@ -2011,7 +2027,6 @@ header {
 
     .dcontainer div div p {
         display: block;
-        width: 90%;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
@@ -2068,6 +2083,10 @@ header {
     }
     /* ***************************************************************************CONTACT.HTML************************ */
     /* ***************************************************************************************************************** */
+    .contact-mean{
+        margin-bottom: 50px;
+    }
+    
     .form .form-inputs{
         display: block;
         justify-content: center;
@@ -2112,6 +2131,9 @@ header {
 
     .header .header-right div h2 {
         font-size: 1rem;
+    }
+    .header .header-right div:nth-child(3)  {
+        margin-bottom: 100px;
     }
 
     .header .header-right div button {
