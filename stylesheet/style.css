@@ -121,8 +121,22 @@ body {
     justify-content: space-around;
     /* background-color: seagreen; */
     width: 100%;
-    height: 7vh;
+    height: 10vh;
     margin-top: 20px;
+}
+.navigation .logo {
+    width: 300px;
+    height: auto;
+    position: relative;
+
+}
+.navigation .logo a img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0em;
+    left: 0;
+    object-fit: cover;
 }
 
 /* .navigation .logo a img{
@@ -1700,15 +1714,9 @@ header {
     .hamburger {
         display: block;
     }
-
-    .navigation .logo {
-        width: 50%;
-        height: 30%;
-        margin-left: -130px;
-        margin-top: 10px;
-
+    .navigation{
+        margin-top: 0px;
     }
-
     .nav-links {
         display: none;
         width: 100%;
