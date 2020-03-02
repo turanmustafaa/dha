@@ -2,6 +2,51 @@
     width: device-width ;
     zoom: 3.0 ;
   } */
+
+.show{
+    z-index: 15;
+    top: 0;
+    left: 0;
+    display: none;
+    /* position: static; */
+    width: 100vw;
+    height: 100vh;
+    
+}
+.show .overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.66);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.show .img-show{
+    width: 600px;
+    height: 400px;
+    background: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden
+}
+.img-show span{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+    cursor: pointer;
+}
+.img-show img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*End style*/
+
   p, ul, ol, dl, pre, address, fieldset, figure{
       margin: 0 0 0 0 !important;
   }

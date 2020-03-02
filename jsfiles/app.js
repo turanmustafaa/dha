@@ -216,4 +216,27 @@ window.onload = function () {
   })
 
 
+
+
 }
+
+
+$(function () {
+  "use strict";
+ 
+  $(".grid-item img").click(function () {
+      window.onmousemove = function(yea){
+      var xposition = yea.clientX;
+      var yposition = yea.clientY;
+    }
+      var $src = $(this).attr("src");
+      $(".show").fadeIn().css("top",`${xposition}px`);
+      
+      $(".img-show img").attr("src", $src);
+      console.log("afa")
+  });
+  $("span, .overlay").click(function () {
+      $(".show").fadeOut();
+  });
+  
+});
