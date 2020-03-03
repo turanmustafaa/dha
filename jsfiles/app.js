@@ -166,33 +166,13 @@ window.onload = function () {
 
 
   // NAVİGATİON BAR ACTİVE CLASS///////////////////////
-  $('.nav-links ul li a').filter(function () {
+
+  $('.nav-links ul li > a').filter(function () {
     return this.href === location.href;
   }).addClass('activeted');
 
 
-
-  //ANASAYFA İŞLERİMİZ CONTAİNERININ GRİD YAPISININ YENİDEN OLUSTURULMASI///////////
-
-
-  //    $vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-  //    $vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-  //   // console.log($vw)
-
-  //   var index = document.querySelectorAll('.works-2 ul li a');
-  //   var viewport = $vw
-
-  //   if(viewport > 650){
-  //   $('.works-2').on('click', function(e){
-  //       $('.works-3').css("display","flex")
-  //       var a = e.target
-  //       var b = index[0]
-  //       if(a === b){
-  //         $('.works-3').css("display", "grid")
-  //       }
-  //   })
-  // }
-
+// FORM GONDERİLDİ ANİMASYON/////////////////////////////////////////////
 
   var formelement = document.querySelector(".form")
   var name = document.getElementById("contact-name");
@@ -229,7 +209,7 @@ $(function () {
       e.stopPropagation();
       return false;
     })
-    var $src = $(".grid-item img").attr("src");
+    var $src = $(this).attr("src");
     $(".show").fadeIn()
     $(".img-show img").attr("src", $src);
     console.log("afa")
