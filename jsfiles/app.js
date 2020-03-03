@@ -216,27 +216,28 @@ window.onload = function () {
   })
 
 
-
-
+  
 }
-
+// ANASAYFA POP UP ////////////////////////////////////////////////////////////////
 
 $(function () {
-  "use strict";
- 
+
   $(".grid-item img").click(function () {
-      window.onmousemove = function(yea){
-      var xposition = yea.clientX;
-      var yposition = yea.clientY;
-    }
-      var $src = $(this).attr("src");
-      $(".show").fadeIn().css("top",`${xposition}px`);
-      
-      $(".img-show img").attr("src", $src);
-      console.log("afa")
-  });
-  $("span, .overlay").click(function () {
+  
+    $('.show').on('scroll touchmove mousewheel', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    })
+    var $src = $(".grid-item img").attr("src");
+    $(".show").fadeIn()
+    $(".img-show img").attr("src", $src);
+    console.log("afa")
+
+    $("span, .overlay").click(function () {
       $(".show").fadeOut();
   });
+  });
   
-});
+  
+}); 
